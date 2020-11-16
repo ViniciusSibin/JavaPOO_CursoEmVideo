@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;br.cursoemvideo.poo.aula5&apos; to &apos;br.cursoemvideo.poo.class5&apos;&#x0D;&#x0A;- Original project: &apos;Class 5&apos;&#x0D;&#x0A;- Original element: &apos;Class 5/src/br.cursoemvideo.poo.aula5&apos;&#x0D;&#x0A;- Renamed element: &apos;Class 5/src/br.cursoemvideo.poo.class5&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;br.cursoemvideo.poo.aula5&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;br.cursoemvideo.poo.aula5" name="br.cursoemvideo.poo.class5" qualified="false" references="true" stamp="1601509203807" textual="false" version="1.0"/>
+</session>

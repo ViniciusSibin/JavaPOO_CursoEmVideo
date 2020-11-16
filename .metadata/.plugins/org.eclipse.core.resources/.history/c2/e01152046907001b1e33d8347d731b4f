@@ -1,0 +1,69 @@
+package br.cursoemvideo.poo.class5;
+
+import java.io.ObjectInputStream.GetField;
+import java.util.Scanner;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		boolean exit = false;
+		int menu;
+		do {
+			System.out.println("*****Seja bem vindo ao banco Nilba*****");
+			System.out.println("Aqui você pode:\n"
+					+ "1 - Abrir uma nova conta\n"
+					+ "2 - Ativar sua conta\n"
+					+ "3 - Encerrar sua conta\n"
+					+ "4 - Depositar Dinheiro\n"
+					+ "5 - Sacar Dinheiro\n"
+					+ "6 - Pagar Mensalidade\n"
+					+ "7 - Verificar Status atual da conta\n"
+					+ "8 - Encerrar processo\n\n");
+			
+			System.out.println("Escolha uma opção do menu digitando o numero do item desejado");
+			menu = scan.nextInt();
+			switch (menu) {
+			case 1: //Abrir uma conta
+				System.out.println("Para abrir uma conta digite o nome do responsável");
+				String responsavel = scan.nextLine();
+				Bank conta = new Bank(responsavel);
+				break;
+			case 2: //Ativar a conta
+				System.out.println("Para ativar a conta digite um dos seguintes tipos:\n"
+						+ "CC - Conta Conrrente\n"
+						+ "CP - Conta Poupança");
+				conta.abrirConta(conta.getNumConta(), scan.nextLine());
+				break;
+			case 3: //Encerrar a conta
+				System.out.println("Você tem certeza que deseja encerrar a conta de responsável: " + conta.getResponsavel());
+				String encerrar = scan.nextLine();
+				if(encerrar == "sim" || encerrar == "SIM" || encerrar == "S" || encerrar == "s") 
+					conta.fecharConta(conta.getNumConta());
+				break;
+			case 4: //Depositar
+				System.out.println("Digite o valor que deseja depositar");
+				conta.depositar(scan.nextFloat());
+				break;
+			case 5: //Sacar
+				System.out.println("Digite o valor que deseja sacar");
+				conta.sacar(scan.nextFloat());
+				break;
+			case 6: //Pagar mensalidade
+				conta.cobrarMensalidade();
+				break;
+			case 7:
+				conta.statusAtual();
+				break;
+			case 8:
+				System.out.println("Encerrando processo...");
+				exit = true;
+				break;
+
+			default:
+				System.out.println("****Opção não reconhecida****\nSelecione uma opção que esteja no menu!!!");
+				break;
+			}
+		}while(!exit);
+	}
+}

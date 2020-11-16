@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;br.cursoemvideo.class4.pen&apos; to &apos;Pen&apos;&#x0D;&#x0A;- Original project: &apos;Class 4&apos;&#x0D;&#x0A;- Original element: &apos;br.cursoemvideo.class4.pen&apos;&#x0D;&#x0A;- Renamed element: &apos;br.cursoemvideo.class4.Pen&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;pen&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;br.cursoemvideo.class4{pen.java[pen" matchStrategy="1" name="Pen" qualified="false" references="true" similarDeclarations="false" stamp="1601083359816" textual="false" version="1.0"/>
+</session>

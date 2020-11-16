@@ -1,0 +1,66 @@
+package br.cursoemvideo.class1;
+
+public class Pen {
+	private String model;
+	private String color;
+	private float tip;
+	private int load;
+	private boolean capped;
+
+	public boolean scribble(boolean a) {
+		if (!a) {
+			System.out.println("ERROR! Pen it is capped!");
+			return false;
+		} else {
+			System.out.println("Scribble");
+			return true;
+		}
+		
+	}
+	
+	public String capped() {
+		setCapped(true);
+		return "Tampada";
+	}
+	
+	public String getModel() {
+		return model;
+	}
+
+	public void setModel(String model) {
+		this.model = model;
+	}
+
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+	public float getTip() {
+		return tip;
+	}
+
+	public void setTip(float tip) {
+		this.tip = tip;
+	}
+
+	public int getLoad() {
+		return load;
+	}
+
+	public void setLoad(int load) {
+		this.load = load;
+	}
+
+	public boolean getCapped() {
+		return capped;
+	}
+
+	public void setCapped(boolean capped) {
+		this.capped = capped;
+	}
+
+}

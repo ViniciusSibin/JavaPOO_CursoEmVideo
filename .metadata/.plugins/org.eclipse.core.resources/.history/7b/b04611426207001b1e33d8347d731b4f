@@ -1,0 +1,18 @@
+package br.cursoemvideo.poo.class5;
+
+import java.io.ObjectInputStream.GetField;
+import java.util.Scanner;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		Bank vini = new Bank("Vinícius");
+		
+		vini.statusAtual();
+		System.out.println("\n__________________________________________\n");
+		System.out.println("Para abrir uma conta gigite o tipo requerido:\nCC - Conta Corrente\nCP - Conta Poupança");
+		vini.abrirConta(vini.getNumConta(), scan.nextLine());
+	}
+
+}

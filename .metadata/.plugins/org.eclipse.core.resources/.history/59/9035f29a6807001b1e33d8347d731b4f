@@ -1,0 +1,30 @@
+package br.cursoemvideo.poo.class5;
+
+import java.io.ObjectInputStream.GetField;
+import java.util.Scanner;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		boolean exit = false;
+		int menu;
+		do {
+			System.out.println("*****Seja bem vindo ao banco Nilba*****");
+			System.out.println("Aqui você pode:\n"
+					+ "1 - Abrir uma nova conta\n"
+					+ "2 - Ativar sua conta\n"
+					+ "3 - Encerrar sua conta\n"
+					+ "4 - Depositar Dinheiro\n"
+					+ "5 - Sacar Dinheiro\n"
+					+ "6 - Pagar Mensalidade\n"
+					+ "7 - Verificar Status atual da conta\n"
+					+ "8 - Encerrar processo\n\n");
+			
+			System.out.println("Escolha uma opção do menu digitando o numero do item desejado");
+			exit = true;
+		}while(!exit);
+
+	}
+
+}

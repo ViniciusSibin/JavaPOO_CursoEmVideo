@@ -1,0 +1,116 @@
+package br.cursoemvideo.poo.class5;
+
+public class Bank {
+	public int numConta;
+	protected String tipoConta;
+	private String responsavel;
+	private float saldo;
+	private boolean status;
+	
+	public Bank(String responsavel) {
+		setResponsavel(responsavel);
+		setNumConta(getNumConta() + 1);
+		setSaldo(0f);
+		setStatus(false);
+		
+	}
+	
+	public void abrirConta(int numConta, String tipo) {
+			if (tipo == "CC") {
+				setSaldo(getSaldo() + 50f);
+				setStatus(true);
+			} else if (tipo == "CP") {
+				setSaldo(getSaldo() + 150f);
+				setStatus(true);
+			} else {
+				System.out.println("****Tipo de conta incorreto!!!****\nPor gentileza escolha entre:\n CC - Conta Corrente\nCP - Conta Poupança");
+			}
+	}
+	
+	public void fecharConta(int numConta) {
+		if(getSaldo() == 0f) {
+			setStatus(false);
+			System.out.println("Sua conta foi encerrada com sucesso!!!");
+		} else if (getSaldo() > 0f) {
+			System.out.println("Sua conta está com saldo positivo!!!\nSaldo atual: " + getSaldo() + "\nFavor sacar restante do saldo anter de encerrar conta!");
+		} else {
+			System.out.println("Sua conta está com saldo negativo!!!\nSaldo atual: " + getSaldo() + "\nFavor acertar saldo anter de encerrar conta!");
+		}
+	}
+	
+	public void depositar(float valor) {
+		if (isStatus()) {
+			setSaldo(getSaldo() + valor);
+			System.out.println("Foi depositado: " + valor + "\nSaldo atual: " + getSaldo());
+		} else {
+			System.out.println("***Sua conta se encontra com sutuação encerrada***\nNão é possível depositar!");
+		}
+	}
+	
+	public void sacar(float valor) {
+		if (isStatus() && getSaldo() >= valor) {
+			setSaldo(getSaldo() - valor);
+			System.out.println("Você está sacando: " + valor + "\nValor atual em conta: " + getSaldo());
+		} else {
+			System.out.println("Você está com saldo insuficiente para saque!!!");
+		}
+	}
+	
+	public void cobrarMensalidade() {
+		if(isStatus() && getTipoConta() == "CC") {
+			setSaldo(getSaldo() - 12f);
+			System.out.println("Foi cobrado a mensalidade da conta no valor de: R$12,00\nValor total: " + getSaldo());
+		} else if (isStatus() && getTipoConta() == "CP") {
+			setSaldo(getSaldo() - 20f);
+			System.out.println("Foi cobrado a mensalidade da conta no valor de: R$20,00\nValor total: " + getSaldo());
+		}
+	}
+	
+	public void statusAtual() {
+		System.out.println("Responsável: " + getResponsavel());
+		System.out.println("Numero da conta: " + getNumConta());
+		System.out.println("Tipo de conta: " + getTipoConta());
+		System.out.println("Saldo: " + getSaldo());
+		System.out.println("Status: " + isStatus());
+	}
+	
+	public int getNumConta() {
+		return this.numConta;
+	}
+	
+	public void setNumConta(int numConta) {
+		this.numConta = numConta;
+	}
+	
+	public String getTipoConta() {
+		return tipoConta;
+	}
+
+	public void setTipoConta(String tipoConta) {
+		this.tipoConta = tipoConta;
+	}
+
+	public String getResponsavel() {
+		return responsavel;
+	}
+
+	public void setResponsavel(String responsavel) {
+		this.responsavel = responsavel;
+	}
+
+	public float getSaldo() {
+		return saldo;
+	}
+
+	public void setSaldo(float saldo) {
+		this.saldo = saldo;
+	}
+
+	public boolean isStatus() {
+		return status;
+	}
+
+	public void setStatus(boolean status) {
+		this.status = status;
+	}
+}

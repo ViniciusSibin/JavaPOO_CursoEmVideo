@@ -1,0 +1,17 @@
+package br.cursoemvideo.poo.class5;
+
+import java.io.ObjectInputStream.GetField;
+import java.util.Scanner;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		Bank vini = new Bank("vinícius");
+		Bank gabi = new Bank("Gabriela");
+		
+		vini.statusAtual();
+		
+	}
+
+}

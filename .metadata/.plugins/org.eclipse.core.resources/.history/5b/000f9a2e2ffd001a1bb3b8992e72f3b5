@@ -1,0 +1,11 @@
+package br.cursoemvideo.class1;
+
+public class test {
+
+	public static void main(String[] args) {
+		Pen pen = new Pen();
+		
+
+	}
+
+}
