@@ -28,6 +28,7 @@ public class Lutador implements Controlador {
 	
 	@Override
 	public void apresentar() {
+		System.out.println("");
 		System.out.println("Nome: " + getNome().toUpperCase());
 		System.out.println("Nacionalidade: " + getNacionalidade());
 		System.out.println("Idade: " + getIdade());
@@ -44,7 +45,10 @@ public class Lutador implements Controlador {
 
 	@Override
 	public void status() {
-		
+		System.out.println("Nome: " + getNome().toUpperCase());
+		System.out.println("Vitorias: " + getVitoria());
+		System.out.println("Empates: " + getEmpate());
+		System.out.println("Derrotas: " + getDerrota());
 		
 	}
 
@@ -53,8 +57,9 @@ public class Lutador implements Controlador {
 
 	@Override
 	public void ganharLuta() {
-		
-		
+		setVitoria(getVitoria() +  1);
+		System.out.println("Parabéns " + getNome() + "Você ganhou a luta!!!!");
+		System.out.println("Total de vitórias: " + getVitoria());
 	}
 
 
@@ -62,7 +67,9 @@ public class Lutador implements Controlador {
 
 	@Override
 	public void perderLuta() {
-	
+		setDerrota(getDerrota() + 1);
+		System.out.println("Lutador " + getNome() + "derrotado!!!!");
+		System.out.println("Total de derrotas: " + getDerrota());
 		
 	}
 
@@ -71,7 +78,9 @@ public class Lutador implements Controlador {
 
 	@Override
 	public void empatarLuta() {
-		
+		setEmpate(getEmpate() + 1);
+		System.out.println("Lutador " + getNome() + "empatou!!!");
+		System.out.println("Total de empates: " + getEmpate());
 		
 	}
 
