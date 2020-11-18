@@ -3,7 +3,9 @@ package br.cursoemvideo.poo.class7;
 public class Teste {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		Lutador PrettyBoy = new Lutador("Pretty Boy", "França", 31, 1.75f, 68.9f);
+		
+		PrettyBoy.apresentar();
 
 	}
 

@@ -1,6 +1,6 @@
 package br.cursoemvideo.poo.class7;
 
-public class Lutador {
+public class Lutador implements Controlador {
 	private String nome;
 	private String nacionalidade;
 	private int idade;
@@ -26,8 +26,9 @@ public class Lutador {
 		}
 	}
 	
+	@Override
 	public void apresentar() {
-		System.out.println("Nome: " + getNome());
+		System.out.println("Nome: " + getNome().toUpperCase());
 		System.out.println("Nacionalidade: " + getNacionalidade());
 		System.out.println("Idade: " + getIdade());
 		System.out.println("Altura: " + getAltura());
@@ -37,22 +38,43 @@ public class Lutador {
 		System.out.println("Empates: " + getEmpate());
 		System.out.println("Derrotas: " + getDerrota());
 	}
-	
+
+
+
+
+	@Override
 	public void status() {
 		
+		
 	}
-	
+
+
+
+
+	@Override
 	public void ganharLuta() {
 		
-	}
-	
-	public void perderLuta() {
 		
 	}
+
+
+
+
+	@Override
+	public void perderLuta() {
 	
+		
+	}
+
+
+
+
+	@Override
 	public void empatarLuta() {
 		
+		
 	}
+
 	
 
 	public String getNome() {
@@ -126,7 +148,4 @@ public class Lutador {
 	public void setDerrota(int derrota) {
 		this.derrota = derrota;
 	}
-	
-	
-	
 }
